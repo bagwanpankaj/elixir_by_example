@@ -1,4 +1,5 @@
 name: Elixir by Example
+author: "Bagwan Pankaj"
 markdown: redcarpet
 pygments: true
 baseurl: /elixir_by_example
