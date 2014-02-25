@@ -1,3 +1,4 @@
 name: Elixir by Example
 markdown: redcarpet
 pygments: true
+baseurl: /elixir_by_example
