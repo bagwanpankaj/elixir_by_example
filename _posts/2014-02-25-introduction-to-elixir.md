@@ -143,6 +143,28 @@ Elixir also has some operators, as
 
   #-- string concatenation
   "this is a string " <> " here is another"
-  #=> "this is a string here is another
+  #=> "this is a string here is another"
+
 {% endhighlight %}
 
+Other operators are: 
+
+{% highlight elixir %}
+
+  #boolean operators, first argument has to be 
+  # boolean (true or false)
+
+  and
+  or
+  not
+
+  #contrary to boolean, below mentioned operator accepts anything, only
+  #evaluating false or nil to false
+
+  &&
+  ||
+  !
+
+{% endhighlight %}
+
+Happy Coding :)
