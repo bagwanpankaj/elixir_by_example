@@ -19,6 +19,23 @@ There are no prequisite to run elixir except
 
 I am not gonna cover these trivial stuff here, as they are already covered [here](http://elixir-lang.org/getting_started/1.html), in detail.
 
+Just FYI, since elixir is still evolving, there are lots of deprication and backward compatibility breakages. So just to be at safe side and on the top, I would recommend to compile from source.
+
+Go get your's and compile it from source.
+
+{% highlight bash %}
+  git clone git@github.com/elixir-lang/elixir.git
+
+  cd elixir/
+
+  make clean test
+
+  #one can use binaries available in bin/ dir but
+  #if one need binaries to be installed in bin dir, do
+
+  sudo make install
+{% endhighlight %}
+
 <!-- more --> 
 
 #### Overview
@@ -48,3 +65,84 @@ Unicode strings: All strings in Elixir are encoded in UTF-8 as Erlang binaries. 
 9.) Variable rebinding: In Elixir, variables can be rebound to different values, even though everything is immutable. It turns out that this is useful in practice and doesn’t actually violate immutability (single assignment is not immutability). The compiler rewrites a variable rebinding as creating a new version of the variable, effectively transforming code into SSA (static single assignment) form.
 
 10.) Erlang interop: Calling Erlang/OTP functions from Elixir has no overhead and does not look much different from regular function calls. Elixir code can also use behaviors - a feature that helps in writing modules conforming to a certain interface.
+
+#### Getting started
+
+Elixir comes with many goodies. Just to get kicked off, we will be starting by using REPL console comes bundled with elixir. So what are you waiting for got hit the commandline with `iex`
+
+At the time of writing this, I am using `Elixir (0.12.4)`, so the code in this excercise is written and tested against this version.
+
+So lets get started:
+
+{% highlight elixir %}
+
+  Erlang R16B01 (erts-5.10.2) [source] [64-bit] [smp:2:2] [async-threads:10] [hipe] [kernel-poll:false] [dtrace]
+
+  Interactive Elixir (0.12.4) - press Ctrl+C to exit (type h() ENTER for help)
+  iex(1)> #To get help or to list usage and doc about a command, pass
+  iex(2)> #it to h() like
+  iex(3)> h(Enum)
+  #will print
+  #Enum                                      
+
+  #Provides a set of algorithms that enumerate over collections according to #the
+  #Enumerable protocol:
+
+  #┃ iex> Enum.map([1, 2, 3], fn(x) -> x * 2 end)
+  #┃ [2,4,6]
+
+  #Some particular types, like dictionaries, yield a specific format on
+  #enumeration. For dicts, the argument is always a { key, value } tuple:
+
+  #┃ iex> dict = HashDict.new [a: 1, b: 2]
+  #┃ iex> Enum.map(dict, fn { k, v } -> { k, v * 2 } end) |> Enum.sort
+  #┃ [a: 2, b: 4]
+
+  #Note that the functions in the Enum module are eager: they always start #the
+  #enumeration of the given collection. The Stream module allows lazy #enumeration
+  #of collections and provides infinite streams.
+
+  #Since the majority of the functions in Enum enumerate the whole #collection and
+  #return a list as result, infinite streams need to be carefully used with #such
+  #functions, as they can potentially run forever. For example:
+
+  #┃ Enum.each Stream.cycle([1,2,3]), &IO.puts(&1)
+
+{% endhighlight %}
+
+Here are list of basic types and their usage, apart from usual types, elixir has some special types as well, like list(or arrays), tuple and atoms
+
+{% highlight elixir %}
+
+  :this_is_an_atom #atom
+
+  {1,2,3} #tuple
+
+  [1,2,3] #list
+
+  "string" #string withing double quotes are treated as string and can be interpolated
+
+  'string' #string withing single quotes are treated as list of char
+
+  #two tabs will list all methods available
+{% endhighlight %}
+
+Elixir also has some operators, as 
+
+{% highlight elixir %}
+  # to operate on or manipulate lists
+  #++ concatenates lists aka union command
+
+  [1,2,3] ++ [5,5] ++ [6,7,8]
+  #=> [1, 2, 3, 5, 5, 6, 7, 8]
+
+  #-- lists aka subtract command
+  [1,2,3,4,6] -- [5,6,8,1]
+  #will subtract whatever two list have in common
+  #=> [2, 3, 4]
+
+  #-- string concatenation
+  "this is a string " <> " here is another"
+  #=> "this is a string here is another
+{% endhighlight %}
+
