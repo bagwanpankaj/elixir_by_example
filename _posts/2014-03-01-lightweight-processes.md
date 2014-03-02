@@ -139,29 +139,29 @@ Good stuff so far!. Let's execute and see what happens
 
 {% highlight elixir %}
 
-  #give message to the messanger
-  Messenger.deliver("Top Secret")
+#give message to the messanger
+Messenger.deliver("Top Secret")
 
-  #and here is what output looks like
+#and here is what output looks like
 
-  # {[#PID<0.307.0>, #PID<0.308.0>, #PID<0.309.0>, #PID<0.310.0>, #PID<0.311.0>,
-  # #PID<0.312.0>, #PID<0.313.0>], "Top Secret"}
-  # #PID<0.306.0> received: Top Secret!
-  # routing to next #PID<0.307.0>
-  # #PID<0.307.0> received: Top Secret!
-  # routing to next #PID<0.308.0>
-  # #PID<0.308.0> received: Top Secret!
-  # routing to next #PID<0.309.0>
-  # #PID<0.309.0> received: Top Secret!
-  # routing to next #PID<0.310.0>
-  # #PID<0.310.0> received: Top Secret!
-  # routing to next #PID<0.311.0>
-  # #PID<0.311.0> received: Top Secret!
-  # routing to next #PID<0.312.0>
-  # #PID<0.312.0> received: Top Secret!
-  # routing to next #PID<0.313.0>
-  # #PID<0.313.0> Huuray, Got the message: Top Secret!
-  # I am Exausted! Bye Bye!
+# {[#PID<0.307.0>, #PID<0.308.0>, #PID<0.309.0>, #PID<0.310.0>, #PID<0.311.0>,
+# #PID<0.312.0>, #PID<0.313.0>], "Top Secret"}
+# #PID<0.306.0> received: Top Secret!
+# routing to next #PID<0.307.0>
+# #PID<0.307.0> received: Top Secret!
+# routing to next #PID<0.308.0>
+# #PID<0.308.0> received: Top Secret!
+# routing to next #PID<0.309.0>
+# #PID<0.309.0> received: Top Secret!
+# routing to next #PID<0.310.0>
+# #PID<0.310.0> received: Top Secret!
+# routing to next #PID<0.311.0>
+# #PID<0.311.0> received: Top Secret!
+# routing to next #PID<0.312.0>
+# #PID<0.312.0> received: Top Secret!
+# routing to next #PID<0.313.0>
+# #PID<0.313.0> Huuray, Got the message: Top Secret!
+# I am Exausted! Bye Bye!
 
 {% endhighlight %}
 

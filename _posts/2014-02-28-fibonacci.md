@@ -9,23 +9,23 @@ I am not gonna use `hello world` example, because that is too simple and boring 
 
 {% highlight elixir %}
 
-  #saved as test_module.ex
+#saved as test_module.ex
 
-  defmodule TestModule do
+defmodule TestModule do
 
-    def fib(0), do: 0
-    def fib(1), do: 1
+  def fib(0), do: 0
+  def fib(1), do: 1
 
-    def fib(n), do: fib(n-1) + fib(n-2)
-  end
+  def fib(n), do: fib(n-1) + fib(n-2)
+end
 
-  ####Uses in iex
-  # open iex with test_module loaded with
-  # iex test_module.ex
-  # TestModule.fib(0) #=> 0
-  # TestModule.fib(1) #=> 1
-  # TestModule.fib(10) #=> 55
-  # TestModule.fib(-10) #=> this will hang as it will recurse for infinite time
+####Uses in iex
+# open iex with test_module loaded with
+# iex test_module.ex
+# TestModule.fib(0) #=> 0
+# TestModule.fib(1) #=> 1
+# TestModule.fib(10) #=> 55
+# TestModule.fib(-10) #=> this will hang as it will recurse for infinite time
 
 {% endhighlight %}
 
@@ -35,23 +35,23 @@ methods are written, they should always be in sequence that can be matched exact
 But there is a gotcha this program is not safe, try passing negative argument to it, program will hang. So to overcome that we need to guard this program to avaoid negative numbers as parameter. Elixir provides an awsome way to do that as well, called `guards`. Let's rewrite this program to safeguard this from negative numbers.
 
 {% highlight elixir %}
-  defmodule TestModule do
+defmodule TestModule do
 
-    def fib(0), do: 0
-    def fib(1), do: 1
+  def fib(0), do: 0
+  def fib(1), do: 1
 
-    def fib(n) when n > 1, do: fib(n-1) + fib(n-2)
-  end
+  def fib(n) when n > 1, do: fib(n-1) + fib(n-2)
+end
 
-  ####Uses in iex
-  # open iex with test_module loaded with
-  # iex test_module.ex
-  # TestModule.fib(0) #=> 0
-  # TestModule.fib(1) #=> 1
-  # TestModule.fib(10) #=> 55
-  # TestModule.fib(-10) 
-  #=> this will raise error like
-  #** (FunctionClauseError) no function clause matching in TestModule.fib/1
+####Uses in iex
+# open iex with test_module loaded with
+# iex test_module.ex
+# TestModule.fib(0) #=> 0
+# TestModule.fib(1) #=> 1
+# TestModule.fib(10) #=> 55
+# TestModule.fib(-10) 
+#=> this will raise error like
+#** (FunctionClauseError) no function clause matching in TestModule.fib/1
 
 {% endhighlight %}
 

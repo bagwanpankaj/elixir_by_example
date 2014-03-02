@@ -26,24 +26,24 @@ Now to execute this quoted representation, we need to eval it, here is how
 
 {% highlight elixir %}
 
-  Code.eval_quoted(differ)
-  #=> {"This one is quoted!", []}
+Code.eval_quoted(differ)
+#=> {"This one is quoted!", []}
 {% endhighlight %}
 
 Now we will make this example more complex
 
 {% highlight elixir %}
-  list = [1,2,3]
-  
-  differ = quote do
-    list |> Enum.map(fn(x) -> x*x end)
-  end
+list = [1,2,3]
 
-  Code.eval_quoted(differ)
+differ = quote do
+  list |> Enum.map(fn(x) -> x*x end)
+end
 
-  #however this will complain us as below
-  #** (CompileError) nofile:1: undefined function list/0
-  #  (elixir) src/elixir_translator.erl:297: :elixir_translator.translate_arg/3
+Code.eval_quoted(differ)
+
+#however this will complain us as below
+#** (CompileError) nofile:1: undefined function list/0
+#  (elixir) src/elixir_translator.erl:297: :elixir_translator.translate_arg/3
 
 {% endhighlight %}
 
