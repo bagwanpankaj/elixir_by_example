@@ -1,23 +1,37 @@
 ---
 layout: default
-title: Elixir by Example
 ---
 
-<!-- <div id="home"> -->
-  <!-- <h1>Blog Posts</h1> -->
-  <div class="posts">
-    {% for post in site.posts %}
-      <h2>{{ post.date | date_to_string }} &raquo; 
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </h2>
-      <div class="post-content-truncate">
-        {% if post.content contains "<!-- more -->" %}
-            {{ post.content | split:"<!-- more -->" | first % }}
-            <a href="{{ site.baseurl }}{{post.url}}">Read full article...</a>
-        {% else %}
-            {{ post.content }}
-        {% endif %}
-      </div>
-    {% endfor %}
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1>
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
+    {{ post.content }}
   </div>
-<!-- </div> -->
+  {% endfor %}
+</div>
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a href="/page{{paginator.next_page}}" class="older">Older</a>
+  {% else %}
+    <span class="next">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a href="/" class="newer">Newer</a>
+    {% else %}
+      <a href="/page{{paginator.previous_page}}" class="newer">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="previous">Newer</span>
+  {% endif %}
+</div>

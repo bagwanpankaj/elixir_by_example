@@ -1,5 +1,13 @@
-name: Elixir by Example
-author: "Bagwan Pankaj"
-markdown: redcarpet
-pygments: true
-baseurl: /elixir_by_example
+title:        Learn Elixir
+tagline:      'Elixir by Example | Elixir Tutorials | Elixir Lessons'
+description:  'Made by <a href="https://twitter.com/bagwanpankaj" target="_blank">@bagwanpankaj</a>.'
+url:          http://m.bagwanpankaj.com/elixir_by_example
+version:      1.1.1
+author:
+  name:       'Bagwan Pankaj'
+  email:      'me@bagwanpankaj.com'
+markdown:     rdiscount
+permalink:    pretty
+pygments:     true
+paginate:     5
+baseurl:      /elixir_by_example
