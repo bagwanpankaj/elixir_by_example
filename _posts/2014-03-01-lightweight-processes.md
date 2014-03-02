@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Lightweight Processes and spawning a proess"
-date:   2014-03-01 21:54:30
+date:   2014-03-01 11:54:30
 tags: spawn process
 ---
 
