@@ -9,8 +9,8 @@ So very first behaviour server of OTP that we are gonna look in is Generic(I am 
 
 Okay Jack! first we look at, as how a event server should look like. Event server are abled to 
 
-1.) receive certain event they are bind to, 
-2.) notify listner bound/subscribed to those events/listner (or client) should consume those event as and when they happen.
+1.) receive certain event they are bind to,  
+2.) notify listner bound/subscribed to those events/listner (or client) should consume those event as and when they happen.  
 
 That's it! To understand this behaviour we will build a broadcast event server. 
 
@@ -36,7 +36,7 @@ This is it. We defined out intial version of broadcast server. It has two method
 
 Jack is dying to use it. Let's look how to use it
 
-1.) We need to initiate a `gen_event` server. This will return tuple of `{:ok, pid}` as a response
+1.) We need to initiate a `gen_event` server. This will return tuple of `{:ok, pid}` as a response  
 
 {% highlight elixir %}
 #initiate a gen_event server
