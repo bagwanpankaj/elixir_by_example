@@ -11,3 +11,6 @@ permalink:    pretty
 pygments:     true
 paginate:     5
 baseurl:      ""
+# Google Analytics
+ga_domain: .bagwanpankaj.com
+ga_tracking_id: UA-47727049-1
