@@ -101,7 +101,52 @@ Map.delete(my_map, :knows)
 
 `Maps` implements most of `Dict` methods, one can look them in [docs](http://elixir-lang.org/docs/master/) 
 
+##### Uses
+
+Maps can be used as data model in `modules` using `defstruct`. Here is how
+
+{% highlight elixir %}
+#define a module
+defmodule Teenage do
+  defstruct name: "", age: 15, knows: ["a", "b", "c"]
+end
+{% endhighlight %}
+
+We can access it by
+
+{% highlight elixir %}
+#accessing struct by
+%Teenage{}
+#=> %Teenage{age: 15, knows: ["a", "b", "c"], name: ""}
+
+#or by
+
+Teenage.__struct__
+#=> %Teenage{age: 15, knows: ["a", "b", "c"], name: ""}
+{% endhighlight %}
+
+Manipulating struct are same as `Maps`
+
+{% highlight elixir %}
+#accessing
+rambo = %Teenage{}
+rambo.name
+#=>""
+rambo.age
+#=> 15
+
+#updating
+rambo = Map.put(rambo, :name, "Rambo")
+#=> %Teenage{age: 15, knows: ["a", "b", "c"], name: "Rambo"}
+#Notice we are reassigning rambo and it needs to be done
+
+#getting type of struct
+
+rambo.__struct__
+#=> Teenage
+{% endhighlight %}
+
+
 __Disclaimer__: Maps are hot changes, available only in `elixir v0.13`, they might change in future.
 
 elixir programming :)
-
