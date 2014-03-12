@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://elixir.bagwanpankaj.com/</loc>
+  <lastmod>2014-03-08T14:51:15+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://elixir.bagwanpankaj.com/2014/03/07/intro-to-maps-in-elixir-13/</loc>
+  <lastmod>2014-03-08T14:51:15+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://elixir.bagwanpankaj.com/2014/03/03/event-server-in-elixir/</loc>
+  <lastmod>2014-03-08T14:51:15+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://elixir.bagwanpankaj.com/2014/03/03/introducing-otp/</loc>
+  <lastmod>2014-03-08T14:51:15+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://elixir.bagwanpankaj.com/2014/03/02/cdn-server/</loc>
+  <lastmod>2014-03-08T14:51:15+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://elixir.bagwanpankaj.com/2014/03/01/quote-unquote/</loc>
+  <lastmod>2014-03-08T14:51:15+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://elixir.bagwanpankaj.com/page2/</loc>
+  <lastmod>2014-03-08T14:51:15+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://elixir.bagwanpankaj.com/2014/03/01/lightweight-processes/</loc>
+  <lastmod>2014-03-08T14:51:15+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://elixir.bagwanpankaj.com/2014/02/28/fibonacci/</loc>
+  <lastmod>2014-03-08T14:51:15+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://elixir.bagwanpankaj.com/2014/02/25/introduction-to-elixir/</loc>
+  <lastmod>2014-03-08T14:51:15+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://elixir.bagwanpankaj.com/2014/02/25/welcome-to-elixir-by-example/</loc>
+  <lastmod>2014-03-08T14:51:15+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+</urlset>
