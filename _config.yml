@@ -1,16 +1,17 @@
 title:        Learn Elixir
 tagline:      'Elixir by Example | Elixir Tutorials | Elixir Lessons'
-description:  'Made by <a href="https://twitter.com/bagwanpankaj" target="_blank">@bagwanpankaj</a>.'
-url:          http://m.bagwanpankaj.com/elixir_by_example
+description:  '<a href="http://bagwanpankaj.com" target="_blank">@bagwanpankaj</a>.'
+url:          http://bagwanpankaj.com/elixir_by_example
 version:      1.1.1
 author:
-  name:       'Bagwan Pankaj'
+  name:       'Pankaj Bagwan'
   email:      'me@bagwanpankaj.com'
 markdown:     rdiscount
 permalink:    pretty
-pygments:     true
+highlighter:  pygments
 paginate:     5
 baseurl:      ""
+gems:         [jekyll-paginate, kramdown]
 # Google Analytics
 ga_domain: .bagwanpankaj.com
 ga_tracking_id: UA-47727049-1
