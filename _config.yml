@@ -1,17 +1,32 @@
-title:        Learn Elixir
-tagline:      'Elixir by Example | Elixir Tutorials | Elixir Lessons'
+exclude:      [README.md, Rakefile]
+title:        Elixir
+tagline:      Elixir by Example | Elixir Tutorials | Elixir Lessons
 description:  '<a href="http://bagwanpankaj.com" target="_blank">@bagwanpankaj</a>.'
+copyright_start: 2009
 url:          http://bagwanpankaj.com/elixir_by_example
 version:      1.1.1
 author:
-  name:       'Pankaj Bagwan'
-  email:      'me@bagwanpankaj.com'
-markdown:     rdiscount
+  name:       Bagwan Pankaj
+  email:      me@bagwanpankaj.com
+  github:     bagwanpankaj
+  github_url: http://github.com/bagwanpankaj
+  linkedin:   bagwanpankaj
+  twitter:    bagwanpankaj
+  rubygems:   http://rubygems.org/profiles/bagwanpankaj
+  bio:        Technology Evangelist | Hacker
+  email_md5:  895c70a2152c65e54a966c9ba535b61e
+  email:      me@bagwanpankaj.com
+markdown:     redcarpet
 permalink:    pretty
 highlighter:  pygments
 paginate:     5
-baseurl:      ""
+paginate_path: "page/:num"
+baseurl:      "/"
+plugins:      [jekyll-paginate, jekyll-gist]
 gems:         [jekyll-paginate, kramdown]
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
 # Google Analytics
 ga_domain: .bagwanpankaj.com
 ga_tracking_id: UA-47727049-1
